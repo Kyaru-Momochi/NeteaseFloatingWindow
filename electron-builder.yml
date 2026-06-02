@@ -1,0 +1,13 @@
+appId: com.netease.floating-window
+productName: NeteaseFloatingWindow
+directories:
+  output: release
+files:
+  - out/**/*
+extraResources:
+  - from: out/smtc-helper/
+    to: .
+win:
+  target: portable
+  icon: null
+npmRebuild: false

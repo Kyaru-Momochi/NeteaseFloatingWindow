@@ -1,0 +1,30 @@
+# 依赖
+node_modules/
+
+# 构建产物
+out/
+dist/
+release/
+
+# C# 编译产物
+smtc-helper/bin/
+smtc-helper/obj/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 环境
+.env
+.env.local
+
+# 临时文件
+*.log
+*.tmp

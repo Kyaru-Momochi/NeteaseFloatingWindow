@@ -1,0 +1,29 @@
+{
+  "name": "netease-floating-window",
+  "version": "1.0.0",
+  "description": "网易云音乐悬浮窗 - 切歌时显示歌曲封面、歌名、歌手",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build && npm run build:smtc",
+    "build:smtc": "dotnet build smtc-helper/smtc-helper.csproj -c Release && node -e \"var fs=require('fs');var p=require('path');var s='smtc-helper/bin/Release';var d=fs.readdirSync(s)[0];var src=p.join(s,d);var dst='out/smtc-helper';fs.mkdirSync(dst,{recursive:true});fs.cpSync(src,dst,{recursive:true})\"",
+    "preview": "electron-vite preview",
+    "pack": "npm run build && electron-builder --win portable"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.30",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^9.2.1",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^5.0.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.11"
+  }
+}
